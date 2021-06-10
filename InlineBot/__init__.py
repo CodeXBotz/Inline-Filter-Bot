@@ -15,7 +15,7 @@ OWNER_ID = int(os.environ.get('OWNER_ID'))
 CUSTOM_START_MESSAGE = os.environ.get('START_MESSAGE','')
 
 try:
-    ADMINS=[]
+    ADMINS=[OWNER_ID]
     for x in (os.environ.get("ADMINS", "").split()):
         ADMINS.append(int(x))
 except ValueError:
