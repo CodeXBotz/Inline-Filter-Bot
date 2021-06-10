@@ -12,6 +12,8 @@ TG_BOT_WORKERS = int(os.environ.get("BOT_WORKERS", '0'))
 DB_NAME = os.environ.get("DATABASE_NAME", "InlineFilterBot")
 thumb = os.environ.get('THUMBNAIL_URL', 'https://telegra.ph/file/516ca261de9ebe7f4ffe1.jpg')
 OWNER_ID = int(os.environ.get('OWNER_ID'))
+CUSTOM_START_MESSAGE = os.environ.get('START_MESSAGE','')
+
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):

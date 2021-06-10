@@ -2,7 +2,7 @@
 # Licensed under GNU General Public License as published by the Free Software Foundation
 # Written by Shahsad Kolathur <shahsadkpklr@gmail.com>, June 2021
 
-from InlineBot import CodeXBotz, filters, Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from InlineBot import CodeXBotz, ADMINS, filters, Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
 from InlineBot.strings import START_MESSAGE, HELP_MESSAGE, ABOUT_MESSAGE, MARKDOWN_HELP
 
@@ -47,10 +47,18 @@ markdown_keyboard = [
     ]
 ]
 
-@CodeXBotz.on_message(filters.command('start') & filters.private & filters.admins)
+@CodeXBotz.on_message(filters.command('start') & filters.private)
 async def start_msg_admins(client: CodeXBotz, message: Message):
-    reply_markup = InlineKeyboardMarkup(start_keyboard)
-    text = START_MESSAGE.format(mention = message.from_user.mention)
+    if message.from_user.id in ADMINS:
+        reply_markup = InlineKeyboardMarkup(start_keyboard)
+    else:
+        reply_markup = InlineKeyboardMarkup(start_keyboard_c)
+    text = START_MESSAGE.format(
+        mention = message.from_user.mention,
+        first_name = message.from_user.first_name,
+        last_name = message.from_user.last_name,
+        user_id = message.from_user.id
+    )
 
     await message.reply(
         text = text,
@@ -59,20 +67,6 @@ async def start_msg_admins(client: CodeXBotz, message: Message):
     )
     if not await present_in_userbase(message.from_user.id):
         await add_to_userbase(message.from_user.id)
-        
-@CodeXBotz.on_message(filters.command('start') & filters.private & ~ filters.admins)
-async def start_msg_users(client: CodeXBotz, message: Message):
-    reply_markup = InlineKeyboardMarkup(start_keyboard_c)
-    text = START_MESSAGE.format(mention = message.from_user.mention)
-
-    await message.reply(
-        text = text,
-        quote = True,
-        reply_markup = reply_markup
-    )
-    if not await present_in_userbase(message.from_user.id):
-        await add_to_userbase(message.from_user.id)
-
     
 @CodeXBotz.on_message(filters.command('help') & filters.private & filters.admins)
 async def help_msg(client: CodeXBotz, message: Message):

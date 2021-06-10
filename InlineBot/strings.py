@@ -3,8 +3,12 @@
 # Written by Shahsad Kolathur <shahsadkpklr@gmail.com>, June 2021
 
 from pyrogram import __version__
+from InlineBot import CUSTOM_START_MESSAGE
 
-START_MESSAGE = """<b>Hello {mention},
+if CUSTOM_START_MESSAGE:
+    START_MESSAGE = CUSTOM_START_MESSAGE
+else:
+    START_MESSAGE = """<b>Hello {mention},
 
 I am an Inline Saver Bot, you can save inline filters and It can be use in any of your chats easily, Click help for more details</b> 
 """
