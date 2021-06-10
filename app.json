@@ -1,0 +1,55 @@
+
+{
+    "name": "Telegram Inline Filter Bot",
+    "description": "An Inline Filter Bot using Mongodb",
+    "keywords": [
+        "telegram",
+        "filter",
+        "bot",
+        "inline"
+    ],
+    "repository": "https://github.com/CodeXBotz/Inline-Filter-Bot",
+    "logo": "https://telegra.ph/file/14d3013fda21281c54b61.jpg",
+    "env": {
+        "TG_BOT_TOKEN": {
+            "description": "Your Bot token, Get it from @Botfather",
+            "value": ""
+        },
+        "OWNER_ID": {
+            "description": "An integer of consisting of your owner ID",
+            "value": "1250450587"
+        },
+        "APP_ID":{
+            "description": "your app id, take it from my.telegram.org",
+            "value": ""
+        },
+        "API_HASH":{
+            "description": "your api hash, take it from my.telegram.org",
+            "value": ""
+        },
+        "DATABASE_URL":{
+            "description": "Database URL from https://cloud.mongodb.com/",
+            "value": ""
+        },
+        "START_MESSAGE": {
+            "description": "Optional: start message of bot, use HTML parsemode format",
+            "value": ""
+        },
+        "ADMINS": {
+            "description": "A space separated list of user_ids of Admins, they can only create links",
+            "value": "",
+            "required": false
+        },
+    },
+    "buildpacks": [
+        {
+        "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
