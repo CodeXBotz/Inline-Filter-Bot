@@ -36,10 +36,12 @@ HELP_MESSAGE = """<b><u>Main Available Commands</u></b>
 
 ABOUT_MESSAGE = f"""<b><u>ABOUT ME</u></b>
 
-<b>○ Support : <a href='https://t.me/CodeXBotzSupport'>Code 𝕏 Botz Support</a>
+<b>○ Channel : <a href='https://t.me/CodeXBotz'>Code 𝕏 Botz</a></b>
+○ Support : <a href='https://t.me/CodeXBotzSupport'>Code 𝕏 Botz Support</a>
+○ Source Code : <a href='https://github.com/CodeXBotz/Inline-Filter-Bot'>Click here</a>
 ○ Language : <a href='https://www.python.org/'>Python 3</a>
 ○ Library : <a href='https://github.com/pyrogram/pyrogram'>Pyrogram Asyncio {__version__}</a>
-○ Channel : <a href='https://t.me/CodeXBotz'>Code 𝕏 Botz</a></b>"""
+"""
 
 MARKDOWN_HELP = """<b><u>Markdown Formatting</u></b>
 

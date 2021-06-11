@@ -265,8 +265,7 @@ async def get_all(client: CodeXBotz, message: Message):
                 sts = await message.reply('<i>Please wait..</i>')
                 keyword_file.name = "filters.txt"
                 await message.reply_document(
-                    document=keyword_file,
-                    thumb=thumbnail_path
+                    document=keyword_file
                 )
                 await sts.delete()
             return
