@@ -22,25 +22,27 @@ HELP_MESSAGE = """<b><u>Main Available Commands</u></b>
     <i>Delete existing Filter</i>
     
 ○ <b>/filters</b>
-    <i>To view see your filters</i>
-    
-○ <b>/delall</b>
-    <i>Delete all of your filters</i>
-    
-○ <b>/import</b> <i>[reply to an exported file]</i>
-    <i>Import filters from Backup file</i>
+    <i>To see the filters</i>
     
 ○ <b>/export</b>
     <i>Export a Backup file of filters, this can be import by others</i>
+    
+<b><u>Owner only Commands</u></b>
+
+○ <b>/delall</b>
+    <i>Delete all of the filters</i>
+    
+○ <b>/import</b> <i>[reply to an exported file]</i>
+    <i>Import filters from Backup file</i>
 """
 
 ABOUT_MESSAGE = f"""<b><u>ABOUT ME</u></b>
 
-<b>○ Channel : <a href='https://t.me/CodeXBotz'>Code 𝕏 Botz</a></b>
+<b>○ Channel : <a href='https://t.me/CodeXBotz'>Code 𝕏 Botz</a>
 ○ Support : <a href='https://t.me/CodeXBotzSupport'>Code 𝕏 Botz Support</a>
 ○ Source Code : <a href='https://github.com/CodeXBotz/Inline-Filter-Bot'>Click here</a>
 ○ Language : <a href='https://www.python.org/'>Python 3</a>
-○ Library : <a href='https://github.com/pyrogram/pyrogram'>Pyrogram Asyncio {__version__}</a>
+○ Library : <a href='https://github.com/pyrogram/pyrogram'>Pyrogram Asyncio {__version__}</a></b>
 """
 
 MARKDOWN_HELP = """<b><u>Markdown Formatting</u></b>

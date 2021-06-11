@@ -5,8 +5,8 @@
 from InlineBot import CodeXBotz, ADMINS, filters, Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
 from InlineBot.strings import START_MESSAGE, HELP_MESSAGE, ABOUT_MESSAGE, MARKDOWN_HELP
-
 from InlineBot.database import present_in_userbase, add_to_userbase
+
 start_keyboard = [
     [
         InlineKeyboardButton(text = '🤔 Help', callback_data = "help"),
@@ -119,9 +119,14 @@ async def help_cbq(client: CodeXBotz, query: CallbackQuery):
     
 @CodeXBotz.on_callback_query(filters.regex('^about$'))
 async def about_cbq(client: CodeXBotz, query: CallbackQuery):
+    user_id = message.from_user.id
+    if user_id in ADMINS:
+        reply_markup = InlineKeyboardMarkup(about_keyboard)
+    else:
+        reply_markup = InlineKeyboardMarkup(about_keyboard_c)
     await query.edit_message_text(
         text = ABOUT_MESSAGE,
-        reply_markup = InlineKeyboardMarkup(about_keyboard),
+        reply_markup = reply_markup,
         disable_web_page_preview = True
     )
     
