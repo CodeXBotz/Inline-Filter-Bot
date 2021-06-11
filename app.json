@@ -39,7 +39,7 @@
             "description": "A space separated list of user_ids of Admins, they can only create links",
             "value": "",
             "required": false
-        },
+        }
     },
     "buildpacks": [
         {
