@@ -119,7 +119,7 @@ async def help_cbq(client: CodeXBotz, query: CallbackQuery):
     
 @CodeXBotz.on_callback_query(filters.regex('^about$'))
 async def about_cbq(client: CodeXBotz, query: CallbackQuery):
-    user_id = message.from_user.id
+    user_id = query.from_user.id
     if user_id in ADMINS:
         reply_markup = InlineKeyboardMarkup(about_keyboard)
     else:
