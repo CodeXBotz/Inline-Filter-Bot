@@ -41,6 +41,12 @@ about_keyboard = [
     ]
 ]
 
+about_keyboard_c = [
+    [
+        InlineKeyboardButton(text = 'Close 🔒', callback_data = 'close')
+    ]
+]
+
 markdown_keyboard = [
     [
         InlineKeyboardButton(text = '🔙 Back', callback_data = 'help')
@@ -78,10 +84,15 @@ async def help_msg(client: CodeXBotz, message: Message):
 
 @CodeXBotz.on_message(filters.command('about') & filters.private)
 async def about_msg(client: CodeXBotz, message: Message):
+    user_id = message.from_user.id
+    if user_id in ADMINS:
+        reply_markup = InlineKeyboardMarkup(about_keyboard)
+    else:
+        reply_markup = InlineKeyboardMarkup(about_keyboard_c)
     await message.reply(
         text = ABOUT_MESSAGE,
         quote = True,
-        reply_markup = InlineKeyboardMarkup(about_keyboard),
+        reply_markup = reply_markup,
         disable_web_page_preview = True
     )
 

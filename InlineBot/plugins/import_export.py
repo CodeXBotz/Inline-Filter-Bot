@@ -22,7 +22,7 @@ from InlineBot.helper_funcs import make_dict
 async def export_data(client: CodeXBotz, message: Message):
     sts_msg = await message.reply('<i>Please Wait..!</i>')
     
-    if await count_filters(user_id) == 0:
+    if await count_filters() == 0:
         await sts_msg.edit('You have no filters to Export')
         return
     data = await get_data()
