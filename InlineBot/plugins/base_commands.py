@@ -19,7 +19,7 @@ start_keyboard = [
 
 start_keyboard_c = [
     [
-        InlineKeyboardButton(text = '🤖 About', callback_data = "about")
+        InlineKeyboardButton(text = '🤖 About', callback_data = "about"),
         InlineKeyboardButton(text = 'Close 🔒', callback_data = "close")
     ]
 ]
