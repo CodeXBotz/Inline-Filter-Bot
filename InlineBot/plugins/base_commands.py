@@ -66,7 +66,8 @@ async def start_msg_admins(client: CodeXBotz, message: Message):
         mention = message.from_user.mention,
         first_name = message.from_user.first_name,
         last_name = message.from_user.last_name,
-        user_id = message.from_user.id
+        user_id = message.from_user.id,
+        username = '' if message.from_user.username == None else '@'+message.from_user.username
     )
 
     await message.reply(

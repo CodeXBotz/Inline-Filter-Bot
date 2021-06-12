@@ -32,8 +32,9 @@
             "value": ""
         },
         "START_MESSAGE": {
-            "description": "Optional: start message of bot, use HTML parsemode format",
-            "value": ""
+            "description": "Optional: custon start message of bot, use HTML parsemode format",
+            "value": "",
+            "required": false
         },
         "ADMINS": {
             "description": "A space separated list of user_ids of Admins, they can only create links",
