@@ -73,7 +73,8 @@ async def start_msg_admins(client: CodeXBotz, message: Message):
     await message.reply(
         text = text,
         quote = True,
-        reply_markup = reply_markup
+        reply_markup = reply_markup,
+        disable_web_page_preview = True
     )
     if not await present_in_userbase(message.from_user.id):
         await add_to_userbase(message.from_user.id)
