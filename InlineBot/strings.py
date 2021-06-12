@@ -3,7 +3,12 @@
 # Written by Shahsad Kolathur <shahsadkpklr@gmail.com>, June 2021
 
 from pyrogram import __version__
-from InlineBot import CUSTOM_START_MESSAGE, OWNER_ID
+from InlineBot import (
+    OWNER_ID,
+    FILTER_COMMAND,
+    DELETE_COMMAND,
+    CUSTOM_START_MESSAGE
+)
 
 if CUSTOM_START_MESSAGE:
     START_MESSAGE = CUSTOM_START_MESSAGE
@@ -13,12 +18,12 @@ else:
 I am an Inline Saver Bot, you can save inline filters and It can be use in any of your chats easily, Click help for more details</b> 
 """
 
-HELP_MESSAGE = """<b><u>Main Available Commands</u></b>
+HELP_MESSAGE = f"""<b><u>Main Available Commands</u></b>
 
-○ <b>/add</b> <i>[keyword] [message or reply to message]</i>
+○ <b>/{FILTER_COMMAND.lower()}</b> <i>[keyword] [message or reply to message]</i>
     <i>Add an Inline filter, you can use MarkDown for formatting</i>
     
-○ <b>/del</b> <i>[keyword]</i>
+○ <b>/{DELETE_COMMAND.lower()}</b> <i>[keyword]</i>
     <i>Delete existing Filter</i>
     
 ○ <b>/filters</b>

@@ -26,9 +26,9 @@ from InlineBot.database import (
     count_filters,
     get_all_filters
 )
+from InlineBot import FILTER_COMMAND, DELETE_COMMAND
 
-
-@CodeXBotz.on_message(filters.command('add') & filters.admins)
+@CodeXBotz.on_message(filters.command(FILTER_COMMAND) & filters.admins)
 async def new_filter(client: CodeXBotz, message: Message):
 
     strid = str(uuid.uuid4())
@@ -233,7 +233,7 @@ async def new_filter(client: CodeXBotz, message: Message):
     )
     await message.reply_text(f"<code>{text}</code> Added", quote = True, reply_markup = reply_markup)
 
-@CodeXBotz.on_message(filters.command('del') & filters.admins)
+@CodeXBotz.on_message(filters.command(DELETE_COMMAND) & filters.admins)
 async def del_filter(client: CodeXBotz, message: Message):
     try:
         cmd, text = message.text.split(" ", 1)

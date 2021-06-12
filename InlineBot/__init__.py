@@ -13,6 +13,8 @@ DB_NAME = os.environ.get("DATABASE_NAME", "InlineFilterBot")
 thumb = os.environ.get('THUMBNAIL_URL', 'https://telegra.ph/file/516ca261de9ebe7f4ffe1.jpg')
 OWNER_ID = int(os.environ.get('OWNER_ID'))
 CUSTOM_START_MESSAGE = os.environ.get('START_MESSAGE','')
+FILTER_COMMAND = os.environ.get('FILTER_COMMAND', 'add')
+DELETE_COMMAND = os.environ.get('DELETE_COMMAND', 'del')
 
 try:
     ADMINS=[OWNER_ID]
