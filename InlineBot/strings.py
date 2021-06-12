@@ -3,7 +3,7 @@
 # Written by Shahsad Kolathur <shahsadkpklr@gmail.com>, June 2021
 
 from pyrogram import __version__
-from InlineBot import CUSTOM_START_MESSAGE
+from InlineBot import CUSTOM_START_MESSAGE, OWNER_ID
 
 if CUSTOM_START_MESSAGE:
     START_MESSAGE = CUSTOM_START_MESSAGE
@@ -38,7 +38,8 @@ HELP_MESSAGE = """<b><u>Main Available Commands</u></b>
 
 ABOUT_MESSAGE = f"""<b><u>ABOUT ME</u></b>
 
-<b>○ Channel : <a href='https://t.me/CodeXBotz'>Code 𝕏 Botz</a>
+<b>○ Maintained by : <a href='tg://user?id={OWNER_ID}'>This Person</a>
+○ Channel : <a href='https://t.me/CodeXBotz'>Code 𝕏 Botz</a>
 ○ Support : <a href='https://t.me/CodeXBotzSupport'>Code 𝕏 Botz Support</a>
 ○ Source Code : <a href='https://github.com/CodeXBotz/Inline-Filter-Bot'>Click here</a>
 ○ Language : <a href='https://www.python.org/'>Python 3</a>
