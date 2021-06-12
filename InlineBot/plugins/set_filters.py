@@ -240,7 +240,7 @@ async def del_filter(client: CodeXBotz, message: Message):
     except:
         await message.reply_text(
             "<i>Mention the filtername which you wanna delete!</i>\n\n"
-            "<code>/del filtername</code>\n\n"
+            f"<code>/{DELETE_COMMAND.lower()} filtername</code>\n\n"
             "Use /filters to view all available filters",
             quote=True
         )
