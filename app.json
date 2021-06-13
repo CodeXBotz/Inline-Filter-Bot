@@ -40,6 +40,21 @@
             "description": "A space separated list of user_ids of Admins, they can only create links",
             "value": "",
             "required": false
+        },
+        "THUMBNAIL_URL": {
+            "description": "Optional: URL of the Image, it used as thumbnail for text ",
+            "value": "",
+            "required": false
+        },
+        "FILTER_COMMAND": {
+            "description": "Optional: Command for add filter",
+            "value": "add",
+            "required": false
+        },
+        "DELETE_COMMAND": {
+            "description": "Optional: Command for delete filter",
+            "value": "del",
+            "required": false
         }
     },
     "buildpacks": [
