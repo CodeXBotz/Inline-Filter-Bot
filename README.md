@@ -33,7 +33,8 @@ A Telegram Bot for filter in Inline
 - Import and Export feature (allows to copy filters from one inline filter bot to another)
 - Custom Start Message, filter adding-deleting command
 
-##
+## DEMO BOT
+<a href="https://t.me/Inlinesaverbot"><img src="https://img.shields.io/badge/Demo-Telegram%20Bot-blue.svg?logo=telegram"></a>
 ### Installation
 #### Deploy on Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)</br>
