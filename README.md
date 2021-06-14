@@ -34,7 +34,8 @@ A Telegram Bot for filter in Inline
 - Custom Start Message, filter adding-deleting command
 
 ## DEMO BOT
-<a href="https://t.me/Inlinesaverbot"><img src="https://img.shields.io/badge/Demo-Telegram%20Bot-blue.svg?logo=telegram"></a>
+<a href="https://t.me/InlineSaverXbot"><img src="https://img.shields.io/badge/Demo-Telegram%20Bot-blue.svg?logo=telegram"></a>
+
 ### Installation
 #### Deploy on Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)</br>
@@ -91,7 +92,7 @@ Report Bugs, Give Feature Requests There..
 
 - Thanks to [Dan](https://github.com/delivrance) for His Awsome [Libary](https://github.com/pyrogram/pyrogram)
 - Thanks to [Mahesh](https://github.com/Mahesh0253) for this [Repo](https://github.com/Mahesh0253/Media-Search-bot)
-- Thanks to [๓คгςยร](https://github.com/prgofficial) for his [Unlimited Filter Repo](https://github.com/TroJanzHEX/Unlimited-Filter-Bot)
+- Thanks to [๓คгςยร](https://github.com/prgofficial) and [ᎫᎪᏟᏦ](https://github.com/Jack-of-tg) for [Unlimited Filter Repo](https://github.com/TroJanzHEX/Unlimited-Filter-Bot)
 
 ### Licence
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
