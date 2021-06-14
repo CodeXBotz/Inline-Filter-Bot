@@ -53,6 +53,8 @@ python3 InlineBot
 * `/del` - delete filter from bot (customisable command)
 * `/filters` - view current filters
 * `/export` - export filters data as file
+* `/stats` - view bot statistics
+* `/broadcast` - broadcast any messages to bot users
 
 #### Owner Commands
 * `/delall` - delete all filters from bot

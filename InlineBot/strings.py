@@ -32,6 +32,12 @@ HELP_MESSAGE = f"""<b><u>Main Available Commands</u></b>
 ○ <b>/export</b>
     <i>Export a Backup file of filters, this can be import by others</i>
     
+○ <b>/stats</b>
+    <i>See the Bot's Statistics</i>
+    
+○ <b>/broadcast</b> <i>[reply to any message]</i>
+    <i>Broadcast any Messages to Bot users</i>
+    
 <b><u>Owner only Commands</u></b>
 
 ○ <b>/delall</b>
