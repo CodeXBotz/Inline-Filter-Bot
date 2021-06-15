@@ -71,11 +71,11 @@ async def get_filters(text):
         documents = filter_collection.find()
         doc_list = list(documents)
         doc_list.reverse()
-        return doc_list[:20]
+        return doc_list[:50]
     else:
         regex = f"^{text}.*"
         query = {'text': {'$regex' : regex}}
-        documents = filter_collection.find(query).sort('text', 1).limit(20)
+        documents = filter_collection.find(query).sort('text', 1).limit(50)
         return documents
 
 async def get_alerts(id):
