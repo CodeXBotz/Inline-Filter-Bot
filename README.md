@@ -72,6 +72,7 @@ python3 InlineBot
 * `ADMINS` Other Admins Telegram Id, seperate by space
 * `DATABASE_URL` Database URL from mongodb.com
 * `THUMBNAIL_URL` Optional: URL of an Image, thumbnail for Text filter
+* `IS_PUBLIC` Optional: Set this False if you creating this bot admins only, Default is True
 * `START_MESSAGE` Optional: Your Bot Start Message, you can use HTML, and fillings for formatting
 * `FILTER_COMMAND` Optional: Custom command for add filter
 * `DELETE_COMMAND` Optional: Custom command for add filter
