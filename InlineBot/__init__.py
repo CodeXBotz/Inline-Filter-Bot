@@ -15,7 +15,7 @@ OWNER_ID = int(os.environ.get('OWNER_ID'))
 CUSTOM_START_MESSAGE = os.environ.get('START_MESSAGE','')
 FILTER_COMMAND = os.environ.get('FILTER_COMMAND', 'add')
 DELETE_COMMAND = os.environ.get('DELETE_COMMAND', 'del')
-IS_PUBLIC = True if os.environ.get('IS_PUBLIC', 'True').lower() != false else False
+IS_PUBLIC = True if os.environ.get('IS_PUBLIC', 'True').lower() != 'false' else False
 try:
     ADMINS=[OWNER_ID]
     for x in (os.environ.get("ADMINS", "").split()):
