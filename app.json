@@ -31,6 +31,11 @@
             "description": "Database URL from https://cloud.mongodb.com/",
             "value": ""
         },
+        "IS_PUBLIC":{
+            "description": "Optional: set this False, if the bot is only for admins",
+            "value": "True",
+            "required": false
+        },
         "START_MESSAGE": {
             "description": "Optional: custon start message of bot, use HTML parsemode format",
             "value": "",

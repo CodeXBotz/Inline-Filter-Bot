@@ -23,7 +23,7 @@ from InlineBot.database import (
     get_filters
 )
 
-@CodeXBotz.on_inline_query()
+@CodeXBotz.on_inline_query(filters.inline)
 async def give_filter(client: CodeXBotz, query: InlineQuery):
     text = query.query.lower()
     documents = await get_filters(text)
@@ -90,6 +90,7 @@ async def give_filter(client: CodeXBotz, query: InlineQuery):
 
     await query.answer(
         results = results,
+        is_personal = True,
         switch_pm_text = switch_pm_text,
         switch_pm_parameter = 'start'
     )
