@@ -4,7 +4,7 @@
 
 import asyncio
 from InlineBot import (
-    CodeXBotz,
+    M2Botz,
     filters,
     Message,
     InlineKeyboardMarkup,
@@ -22,14 +22,14 @@ from pyrogram.errors import (
     InputUserDeactivated
 )
 
-@CodeXBotz.on_message(filters.private & filters.command('stats') & filters.admins)
-async def getstatus(client: CodeXBotz, message: Message):
+@m2_botz.on_message(filters.private & filters.command('stats') & filters.admins)
+async def getstatus(client: M2Botz, message: Message):
     sts_msg = await message.reply('Getting Details..')
     stats = await get_status()
     await sts_msg.edit(stats)
     
-@CodeXBotz.on_message(filters.private & filters.command('broadcast') & filters.admins & filters.reply)
-async def broadcast(client: CodeXBotz, message: Message):
+@m2_botz.on_message(filters.private & filters.command('broadcast') & filters.admins & filters.reply)
+async def broadcast(client: M2Botz, message: Message):
     broadcast_msg = message.reply_to_message
     broadcast_msg = await broadcast_msg.copy(
         chat_id = message.chat.id,
@@ -49,8 +49,8 @@ async def broadcast(client: CodeXBotz, message: Message):
     )
     return
 
-@CodeXBotz.on_callback_query(filters.admins & filters.regex('^bdcast_cnfrm$'))
-async def broadcast_confrm(client: CodeXBotz, query):
+@m2_botz.on_callback_query(filters.admins & filters.regex('^bdcast_cnfrm$'))
+async def broadcast_confrm(client: M2Botz, query):
     if not query.message.reply_to_message:
         await query.answer(
             text = 'Message not found',
