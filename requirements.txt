@@ -1,5 +1,5 @@
 https://github.com/Mahesh0253/pyrogram/archive/inline.zip
-pymongo
+pymongo==3.11.4
 TgCrypto
 telegraph
 dnspython
