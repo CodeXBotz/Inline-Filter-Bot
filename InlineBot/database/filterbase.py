@@ -50,7 +50,7 @@ async def get_all_filters():
     return texts
 
 async def count_filters():
-    count = filter_collection.find().count()
+    count = filter_collection.count_documents({})
     return count
 
 async def del_all(message):
