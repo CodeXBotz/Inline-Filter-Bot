@@ -60,7 +60,7 @@ async def del_all(message):
         return
 
     try:
-        filter_collection.remove()
+        filter_collection.drop()
         await message.edit_text("All filters deleted.!")
     except:
         await message.edit_text(f"Couldn't remove all of your filters")
