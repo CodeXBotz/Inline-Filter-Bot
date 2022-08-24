@@ -50,7 +50,7 @@ async def get_all_filters():
     return texts
 
 async def count_filters():
-    count = filter_collection.find().count()
+    count = filter_collection.count_documents({})
     return count
 
 async def del_all(message):
@@ -60,7 +60,7 @@ async def del_all(message):
         return
 
     try:
-        filter_collection.remove()
+        filter_collection.drop()
         await message.edit_text("All filters deleted.!")
     except:
         await message.edit_text(f"Couldn't remove all of your filters")
@@ -129,7 +129,7 @@ async def get_status():
         filters_no += 1
     
     user_collection = database['users']
-    no_users = user_collection.find().count()
+    no_users = user_collection.count_documents({})
     
     stats_text = f"""<b>Statistics</b>
     
