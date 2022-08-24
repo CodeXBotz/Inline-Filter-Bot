@@ -129,7 +129,7 @@ async def get_status():
         filters_no += 1
     
     user_collection = database['users']
-    no_users = user_collection.find().count()
+    no_users = user_collection.count_documents({})
     
     stats_text = f"""<b>Statistics</b>
     
